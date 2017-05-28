@@ -128,6 +128,13 @@ module Searchkick
           end
         end unless method_defined?(:reindex)
 
+        def termvectors(arguments = {})
+          index = self.class.searchkick_index
+          index_name = index.name
+          index_type = index.send :document_type, self
+          Searchkick.client.termvectors(:id => self.id, :index => index_name, :type => index_type)
+        end
+
         # TODO remove this method in next major version
         def reindex_async
           reindex(async: true)
