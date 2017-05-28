@@ -299,7 +299,7 @@ module Searchkick
             if field == "_all" || field.end_with?(".analyzed")
               shared_options[:cutoff_frequency] = 0.001 unless operator == "and" || misspellings == false
               qs.concat [
-                shared_options.merge(analyzer: Searchkick.searchkick_search_analyer),
+                shared_options.merge(analyzer: Searchkick.searchkick_search_analyzer),
                 shared_options.merge(analyzer: Searchkick.searchkick_search2_analyzer)
               ]
               exclude_analyzer = Searchkick.searchkick_search2_analyzer
