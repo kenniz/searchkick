@@ -229,7 +229,7 @@ module Searchkick
 
         mapping_options[:searchable].delete("_all")
 
-        analyzed_field_options = {type: default_type, index: "analyzed", analyzer: default_analyzer}
+        analyzed_field_options = {type: default_type, index: "analyzed", analyzer: Searchkick.default_analyzed_analyzer}
 
         mapping_options.values.flatten.uniq.each do |field|
           fields = {}
