@@ -37,7 +37,7 @@ module Searchkick
 
   class << self
     attr_accessor :search_method_name, :wordnet_path, :timeout, :models, :client_options, :redis, :index_suffix, :queue_name,
-      :searchkick_search_analyzer, :searchkick_search2_analyzer, :default_analyzer
+      :searchkick_search_analyzer, :searchkick_search2_analyzer, :default_analyzed_analyzer
     attr_writer :client, :env, :search_timeout
     attr_reader :aws_credentials
   end
