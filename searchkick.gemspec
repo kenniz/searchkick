@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "searchkick/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "searchkick-hooopo"
+  spec.name          = "searchkick"
   spec.version       = Searchkick::VERSION
   spec.authors       = ["Andrew Kane"]
   spec.email         = ["andrew@chartkick.com"]
